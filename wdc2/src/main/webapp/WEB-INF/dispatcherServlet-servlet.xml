@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!--SpringMVC的配置文件，包含网站跳转逻辑的控制，配置  -->
+	<context:component-scan base-package="com.wdc" use-default-filters="false">
+		<!--只扫描控制器。  -->
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+	</context:component-scan>
+	
+	<!--配置视图解析器，方便页面返回  -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	
+	<mvc:view-controller path="admins/slideView" view-name="admin/slide"/>
+	<mvc:view-controller path="admins/adminView" view-name="admin/admin"/>
+	<mvc:view-controller path="admins/technologyView" view-name="admin/technology"/>
+	<mvc:view-controller path="admins/productView" view-name="admin/product"/>
+	<mvc:view-controller path="admins/projectView" view-name="admin/project"/>
+	<mvc:view-controller path="admins/toolView" view-name="admin/tool"/>
+	<mvc:view-controller path="admins/applicationView" view-name="admin/application"/>
+	<mvc:view-controller path="admins/tradeView" view-name="admin/trade"/>
+	<mvc:view-controller path="admins/developerView" view-name="admin/developer"/>
+	<mvc:view-controller path="admins/developmentView" view-name="admin/development"/>
+	<mvc:view-controller path="admins/qrView" view-name="admin/qr"/>
+	<mvc:view-controller path="admins/informationView" view-name="admin/information"/>
+	<mvc:view-controller path="admins/questionView" view-name="admin/question"/>
+	<mvc:view-controller path="admins/contactView" view-name="admin/contact"/>
+	<mvc:view-controller path="admins/chainView" view-name="admin/chain"/>
+	
+	<mvc:view-controller path="loginView2" view-name="admin/login"/>
+	<mvc:view-controller path="loginView" view-name="/login"/>
+	
+	
+	<mvc:view-controller path="user/home_1" view-name="user/home_1"/>
+	<mvc:view-controller path="user/application_1" view-name="user/application_1"/>
+	<mvc:view-controller path="user/developer_1" view-name="user/developer_1"/>
+	<mvc:view-controller path="user/information_1" view-name="user/information_1"/>
+	<mvc:view-controller path="user/informationDetail_1/**" view-name="user/informationDetail_1"/>
+	
+	<mvc:view-controller path="english/home_1" view-name="english/home_1"/>
+	<mvc:view-controller path="english/application_1" view-name="english/application_1"/>
+	<mvc:view-controller path="english/developer_1" view-name="english/developer_1"/>
+	<mvc:view-controller path="english/information_1" view-name="english/information_1"/>
+	<mvc:view-controller path="english/informationDetail_1/**" view-name="english/informationDetail_1"/>
+	
+	
+	
+	<mvc:view-controller path="user/home" view-name="user/home"/>
+	<mvc:view-controller path="user/chain" view-name="user/chain"/>
+	<mvc:view-controller path="user/project" view-name="user/project"/>
+	<mvc:view-controller path="user/use" view-name="user/use"/>
+	<mvc:view-controller path="user/developer" view-name="user/developer"/>
+	<mvc:view-controller path="user/information" view-name="user/information"/>
+	<mvc:view-controller path="user/informationDetail/**" view-name="user/informationDetail"/>
+	<mvc:view-controller path="user/question" view-name="user/question"/>
+	<mvc:view-controller path="user/questionDetail/**" view-name="user/questionDetail"/>
+	<mvc:view-controller path="test" view-name="user/NewFile"/>
+	<mvc:view-controller path="test1" view-name="user/NewFile1"/>
+	<mvc:view-controller path="home1" view-name="admin/home"/>
+	
+	<mvc:view-controller path="english/home" view-name="english/home"/>
+	<mvc:view-controller path="english/project" view-name="english/project"/>
+	<mvc:view-controller path="english/use" view-name="english/use"/>
+	<mvc:view-controller path="english/developer" view-name="english/developer"/>
+	<mvc:view-controller path="english/information" view-name="english/information"/>
+	<mvc:view-controller path="english/informationDetail/**" view-name="english/informationDetail"/>
+	<mvc:view-controller path="english/question" view-name="english/question"/>
+	<mvc:view-controller path="english/questionDetail/**" view-name="english/questionDetail"/>
+	<mvc:view-controller path="english/chain" view-name="english/chain"/>
+	
+	
+	<!--两个标准配置  -->
+	<!-- 将springmvc不能处理的请求交给tomcat -->
+	<mvc:default-servlet-handler/>
+	<!-- 能支持springmvc更高级的一些功能，JSR303校验，快捷的ajax...映射动态请求 -->
+	<mvc:annotation-driven/>
+	
+
+	
+	<mvc:interceptors>
+	    <!-- 配置拦截器(不)作用的路径 -->  
+		<mvc:interceptor>
+			
+		 	
+			<mvc:mapping path="/admins/**"/>
+			
+			<!-- <mvc:exclude-mapping path="/user/login"/>
+			<mvc:exclude-mapping path="/user/logout"/>
+			<mvc:exclude-mapping path="/user/reg"/>
+			<mvc:mapping path="/**"/>
+		    <mvc:exclude-mapping path="/"/>
+		    <mvc:exclude-mapping path="/index"/>
+		    <mvc:exclude-mapping path="slide"/>
+		    <mvc:exclude-mapping path="/admin/"/>
+		    <mvc:exclude-mapping path="/admins/"/>
+		    <mvc:exclude-mapping path=""/>
+			<mvc:exclude-mapping path="/user/checkUserName"/> -->
+			
+         	
+         	<bean class="com.wdc.utils.LoginInterceptor"></bean>	
+         	
+		</mvc:interceptor>
+			<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"></bean>
+	</mvc:interceptors>
+<!-- 配置上传文件解析器 -->
+	<bean id="multipartResolver" 
+	    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	    <property name="defaultEncoding" value="UTF-8"/>
+	   
+	</bean>
+</beans>

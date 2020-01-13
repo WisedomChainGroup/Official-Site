@@ -1,0 +1,114 @@
+.mobile_content {
+	text-align: center;
+	color: #FFFFFF;
+	background: #003d90;
+
+	overflow: hidden;
+
+}
+
+.mobile_jianjie {
+	overflow: hidden;
+	padding: 20px 30px;
+}
+
+.mobile_content a {
+	border: 1px solid #fff;
+	padding: 5px 20px;
+	border-radius: 5px;
+	display: inline-block;
+	color: #FFFFFF;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+
+.mobile_content h5 {
+	font-size: 18px;
+	line-height: 65px;
+	font-weight: inherit;
+	font-style: inherit;
+}
+
+.mobile_content p {
+	line-height: 25px;
+}
+
+.mobile_content .p-1{
+	
+	margin-bottom: 50px;
+}
+
+
+
+.container {
+	margin-top: 25px;
+
+}
+
+.container img {
+	width: 150px;
+	height: 100px;
+}
+
+.container h4 {
+	font-size: 15px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-weight: inherit;
+	font-style: inherit;
+
+}
+
+.line {
+	display: block;
+	width: 100px;
+	height: 1px;
+	margin: 0 auto;
+	background-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 4%, #BCD5FF 50%, rgba(255, 255, 255, 0) 93%);
+}
+
+.container p {
+	margin-top: 10px;
+	font-size: 12px;
+	padding: 0 10px;
+	text-align: center;
+	text-indent: 0em;
+	line-height: 22px;
+	color: #F5F5F5;
+height: 150px;
+}
+
+.wdc_jianjie .container_box{
+	width: 33.3%;
+	float: left;
+}
+
+
+.wdc_jianjie .container {
+	width: 300px;	
+	margin: 0 auto;
+	padding: 20px 30px;
+	margin-bottom: 30px;
+	overflow: hidden;
+	border: 1px solid #fff;
+	border-radius:5px ;
+}
+
+@media screen and (max-width: 768px) {
+	.wdc_jianjie .container {
+		width: auto;
+		border: 0;
+		padding: 0;
+	}
+	.wdc_jianjie .container_box{
+		width: auto;
+		float: none;
+	}
+	
+	
+	.container p{
+		height: auto;
+		}
+	
+}

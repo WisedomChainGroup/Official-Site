@@ -1,0 +1,233 @@
+.mobile_content {
+	margin-top: 55px;
+
+
+}
+
+.blog_banner {
+	width: 100%;
+	height: unset;
+	overflow: hidden;
+	position: relative;
+	margin-top: 55px;
+	padding: 80px 0;
+	background: #242b3c;
+	text-align: center;
+}
+
+.blog_banner .blog_bg {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-left: 0;
+	z-index: 1;
+}
+
+.blog_banner .banner_search {
+	position: relative;
+	z-index: 3;
+}
+
+.banner_search h3 span {
+	display: block;
+	font-size: 25px;
+	color: #ffffff;
+	letter-spacing: -0.58px;
+	text-align: center;
+
+}
+
+.inline {
+	width: 7.5rem;
+	height: 1px;
+	margin: 15px auto 20px;
+	background-image: linear-gradient(-90deg, rgba(97, 175, 255, 0) 0%, #4a93ff 49%, rgba(50, 118, 255, 0) 100%);
+	margin: 10px auto;
+}
+
+
+
+.search_wraper {
+	width: 600px;
+	height: 50px;
+	margin: 0 auto;
+	background: url(../img/search-box.webp) no-repeat;
+	background-size: 600px 50px;
+	border-radius: 6px;
+	position: relative
+}
+
+.banner_search .search_wraper input {
+	background: none;
+	border: none;
+	outline: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 12px;
+	padding-left: 15px;
+	padding-right: 50px;
+	box-sizing: border-box;
+}
+
+.banner_search .search_wraper img {
+	display: block;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	right: 15px;
+	top: 14px;
+	cursor: pointer;
+}
+
+
+
+.dapp_items {
+	position: relative;
+	padding-left: 40px;
+	padding-top: 20px;
+
+}
+
+.dapp_items .dapp_item {
+	display: inline-block;
+	margin-right: 40px;
+	cursor: pointer;
+}
+
+.dapp_items .dapp_item.active {
+	border-bottom: 2px solid #2E3550;
+}
+
+.dapp_items .dapp_item span {
+	font-size: 16px;
+	letter-spacing: -0.27px;
+	line-height: 40px;
+}
+
+
+
+.wdc_container {
+	background: #fff;
+}
+
+.wdc_container .wdc-item-container {
+	margin: 0 auto;
+	padding: 20px 30px 60px 30px;
+	overflow: hidden;
+}
+
+
+.wdc_container .wdc_item {
+
+	overflow: hidden;
+	padding: 30px 0 30px;
+	border-bottom: 1px solid #DDD;
+}
+
+.wdc_container .wdc_item:first-child {
+	border-top: 1px solid #DDD;
+}
+
+.wdc_item_title {
+	font-size: 1.1rem;
+	line-height: 3rem;
+	color: #2E3550;
+	letter-spacing: 0;
+	cursor: pointer;
+}
+
+.wdc_item_bread {
+	margin-top: 0;
+	margin-bottom: 16px;
+	font-size: 14px;
+}
+
+.wdc_item_bread span {
+	color: #A4AAB4;
+	letter-spacing: 0;
+	font-size: 0.71rem;
+}
+
+
+@media screen and (max-width: 768px) {
+
+	.search_wraper {
+		width: 300px;
+		height: 40px;
+		background-size: 300px 40px;
+	}
+
+	.blog_banner {
+
+		padding: 50px 0;
+	}
+
+	.banner_search h3 span {
+		font-size: 16px;
+	}
+
+	.banner_search .search_wraper img {
+
+		top: 10px;
+	}
+
+
+
+	.blog_list .blog_item {
+		overflow: hidden;
+		height: 95px;
+		margin-top: 25px;
+		display: flex;
+		align-items: center;
+	}
+
+	.blog_item .blog_img_container {
+		width: 150px;
+		height: 100%;
+		float: none;
+	}
+
+	.blog_item .blog_item_text {
+
+		flex: 1;
+		padding: 5px 0 0 10px;
+		float: none;
+		box-sizing: border-box;
+	}
+
+	.blog_item_text .blog_item_title {
+		font-size: 14px;
+	}
+
+	.dapp_items .dapp_item {
+		width: 85px;
+		text-align: center;
+		margin: 0;
+	}
+
+	.fag_dapp {
+
+		padding: 0 30px;
+	}
+
+	.dapp_items {
+		padding-left: 0;
+	}
+
+	.dapp_items .dapp_item.active {
+		border: 0;
+		background: #2E3550;
+		color: #fff;
+	}
+
+	.dapp_items .dapp_item span {
+		font-size: 12px;
+		line-height: 30px;
+	}
+
+}
