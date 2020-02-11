@@ -29,9 +29,9 @@ import com.aliyun.oss.model.PutObjectResult;
 public class AliOSSUtil {
 	private static Logger log = LoggerFactory.getLogger(AliOSSUtil.class);
 
-	public static String END_POINT = "http://oss-cn-hongkong.aliyuncs.com";
-	public static String ACCESS_KEY_ID = "LTAI3xLZRPxE9FGg";
-	public static String ACCESS_KEY_SECRET = "BPCMhqypWOiwXKRN8E1YGeBqJTP3ff";
+	public static String END_POINT = "";
+	public static String ACCESS_KEY_ID = "";
+	public static String ACCESS_KEY_SECRET = "";
 	public static String BUCKET_NAME = "card-wisechain";
 	// 文件访问域名
 	public static String FILE_HOST = "https://card-wisechain.oss-cn-hongkong.aliyuncs.com";
